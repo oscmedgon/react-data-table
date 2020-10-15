@@ -1,0 +1,18 @@
+.tabular-container {
+  display: flex;
+  background-color: white;
+  .tabular-column {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    background-color: white;
+    &[data-locked="true"] {
+      position: sticky;
+      left: 0;
+    }
+    .tabular-header, .tabular-cell {
+      text-wrap: avoid;
+      white-space: nowrap;
+    }
+  }
+}

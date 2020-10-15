@@ -1,0 +1,3 @@
+.tabular-container{display:flex;background-color:white}.tabular-container .tabular-column{display:flex;flex-direction:column;padding:5px 20px;background-color:white}.tabular-container .tabular-column[data-locked="true"]{position:sticky;left:0}.tabular-container .tabular-column .tabular-header,.tabular-container .tabular-column .tabular-cell{text-wrap:avoid;white-space:nowrap}
+
+/*# sourceMappingURL=main.css.map */

@@ -16,25 +16,34 @@ export default function ReactTabularGrid({
                     base.path = options.columns[key];
                     base.type = 'string';
                 } else if (typeof options.columns[key] === 'object') {
-                    const { path, type } = options.columns[key];
+                    const { path, type, lock } = options.columns[key];
                     base.path = path;
                     base.type = type;
+                    base.lock = lock;
                 }
                 return base;
             });
 
         setColumns(newColumns);
     }, [JSON.stringify({ data, options })]);
-    function renderColumn({ name, path, type, label }) {
+    function renderColumn({
+        name,
+        path,
+        type,
+        label,
+        lock = false,
+    }) {
+        const header = label || name;
+
         return (
-            <div className='tabular-column' style={{ display: 'flex', flexDirection: 'column', padding: '5px 20px' }}>
-                <div className='tabular-header'>{label || name}</div>
-                {data.map(el => <div>{accessObjectByString(path, el)}</div>)}
+            <div className='tabular-column' data-locked={lock}>
+                <div className='tabular-header'>{header}</div>
+                {data.map(el => <div className='tabular-cell'>{accessObjectByString(path, el)}</div>)}
             </div>
         );
     }
     return (
-        <div className='tabular-container' style={{ display: 'flex' }}>
+        <div className='tabular-container'>
             {columns.map(renderColumn)}
         </div>
     );
