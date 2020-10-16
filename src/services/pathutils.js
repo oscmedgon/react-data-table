@@ -1,4 +1,4 @@
-export function accessObjectByString(path, obj = self, separator = '.') {
+export function accessObjectByString(path, obj, separator = '.') {
     // let val = o;
     // s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
     // s = s.replace(/^\./, ''); // strip a leading dot

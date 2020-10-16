@@ -26,25 +26,110 @@ export default function ReactTabularGrid({
 
         setColumns(newColumns);
     }, [JSON.stringify({ data, options })]);
-    function renderColumn({
-        name,
-        path,
-        type,
-        label,
-        lock = false,
-    }) {
-        const header = label || name;
 
+    return <ColumnsComponent options={options} columns={columns} data={data} />;
+}
+
+function ColumnsComponent({
+    options: {
+        icons: {
+            lock: {
+                on: lockIconOn = 'fas fa-lock',
+                off: lockIconOff = 'fas fa-lock-open',
+            } = {},
+        } = {},
+    } = {},
+    data,
+    columns,
+}) {
+    const [config, setConfig] = React.useState(columns);
+
+    React.useEffect(() => {
+        const currentConfig = config.map(el => ({ ...el }));
+        const newConfig = columns;
+        if (currentConfig.length === 0) {
+            setConfig(newConfig);
+        } else {
+            const populated = currentConfig.reduce((acc, el) => {
+                const prevColIndex = newConfig.findIndex(({ name }) => name === el.name);
+                if (prevColIndex === -1) {
+                    return acc;
+                }
+                const { name } = el;
+                const { label, path, hide, lock } = newConfig[prevColIndex];
+                const newEl = {
+                    name,
+                    hide: el.hide !== undefined ? el.hide : hide,
+                    label: el.label !== undefined ? el.label : label,
+                    lock: el.lock !== undefined ? el.lock : lock,
+                    path,
+                };
+                acc.push(newEl);
+            }, []);
+            setConfig(populated);
+        }
+    }, [JSON.stringify({ columns })]);
+
+    function manageToggleLock(columnName) {
+        const newConfig = config.map((el) => {
+            if (el.name === columnName) {
+                return {
+                    ...el,
+                    lock: !el.lock,
+                };
+            }
+            return el;
+        });
+        setConfig(newConfig);
+    }
+
+    function renderColumn(
+        {
+            name,
+            path,
+            type,
+            label,
+            lock,
+        },
+        columnIndex,
+    ) {
+        const header = label || name;
         return (
-            <div className='tabular-column' data-locked={lock}>
-                <div className='tabular-header'>{header}</div>
-                {data.map(el => <div className='tabular-cell'>{accessObjectByString(path, el)}</div>)}
+            <div
+                className='tabular-column'
+                id={header}
+                key={`${header}-COLUMN`}
+                data-index={columnIndex}
+            >
+                <div className='tabular-header'>
+                    <span className='header-label'>
+                        {header}
+                    </span>
+                    <div className='header-actions'>
+                        <i className={lock ? lockIconOn : lockIconOff} onClick={() => manageToggleLock(name)} />
+                    </div>
+                </div>
+                {data.map((el, index) => (
+                    <div
+                        className='tabular-cell'
+                        key={`${header}-ROW-${index}`}
+                    >
+                        {accessObjectByString(path, el)}
+                    </div>
+                ))}
             </div>
         );
     }
+    const lockedColumns = config.filter(column => column.lock);
+    const unlockedColumns = config.filter(column => !column.lock);
     return (
         <div className='tabular-container'>
-            {columns.map(renderColumn)}
+            {lockedColumns.length >= 1 && (
+                <div className='locked-columns__container'>
+                    {lockedColumns.map(renderColumn)}
+                </div>
+            )}
+            {unlockedColumns.map(renderColumn)}
         </div>
     );
 }
