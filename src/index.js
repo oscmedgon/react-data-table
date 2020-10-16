@@ -15,11 +15,22 @@ export default function ReactTabularGrid({
                 if (typeof options.columns[key] === 'string') {
                     base.path = options.columns[key];
                     base.type = 'string';
+                    base.lock = false;
+                    base.hide = false;
+                    base.label = base.name;
                 } else if (typeof options.columns[key] === 'object') {
-                    const { path, type, lock } = options.columns[key];
+                    const {
+                        path,
+                        type = 'string',
+                        lock = false,
+                        hide = false,
+                        label = base.name,
+                    } = options.columns[key];
                     base.path = path;
                     base.type = type;
                     base.lock = lock;
+                    base.hide = hide;
+                    base.label = label;
                 }
                 return base;
             });
@@ -43,6 +54,7 @@ function ColumnsComponent({
     columns,
 }) {
     const [config, setConfig] = React.useState(columns);
+    const [settingsStatus, setSettingsStatus] = React.useState(false);
 
     React.useEffect(() => {
         const currentConfig = config.map(el => ({ ...el }));
@@ -130,6 +142,20 @@ function ColumnsComponent({
                 </div>
             )}
             {unlockedColumns.map(renderColumn)}
+            <div className='options-container' data-toggled={settingsStatus}>
+                {settingsStatus ? (
+                    <div className='tabular-settings'>
+                        <i className='fa fa-times close-settings' onClick={() => setSettingsStatus(false)} />
+                        {config.map(({ name, label, lock, hide }) => (
+                            <div className='tabular-settings__item'>
+                                <span>{label}</span>
+                                <i className={lock ? lockIconOn : lockIconOff} onClick={() => manageToggleLock(name)} />
+                            </div>
+                        ))}
+                    </div>
+                ) : <i className='fa fa-cog open-settings' onClick={() => setSettingsStatus(true)} />}
+
+            </div>
         </div>
     );
 }

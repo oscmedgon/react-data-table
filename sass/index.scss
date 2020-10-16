@@ -3,6 +3,7 @@
     background-color: white;
     width: fit-content;
     .locked-columns__container {
+        z-index: 1;
         position: sticky;
         left: 0;
         display: flex;
@@ -32,6 +33,44 @@
         }
         .tabular-header {
             display: flex;
+            position: sticky;
+            background-color: white;
+            padding: 5px 0;
+            top: 0;
+        }
+    }
+    &:hover .options-container {
+        display: block;
+    }
+    .options-container {
+        display: none;
+        position: sticky;
+        top: 0;
+        right: 0;
+        background-color: white;
+        padding: .6rem;
+        max-height: max-content;
+        &[data-toggled="true"] {
+            display: block;
+        }
+        .tabular-settings {
+            position: relative;
+            border: 1px solid black;
+            padding: 20px 40px;
+            .close-settings {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .tabular-settings__item {
+                display: flex;
+                .open-settings {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
