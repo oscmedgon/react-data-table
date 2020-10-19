@@ -15,3 +15,26 @@ export function accessObjectByString(path, obj, separator = '.') {
     const properties = Array.isArray(path) ? path : path.split(separator);
     return properties.reduce((prev, curr) => prev && prev[curr], obj);
 }
+
+export function getUniqueValuesByPath(path, arr, separator = '.') {
+    if (typeof arr === 'undefined') {
+        throw new Error('Cant call getUniqueValuesByPath with an undefined iterator');
+    }
+    if (typeof arr !== 'object' && !Array.isArray(arr)) {
+        throw new Error(`Method getUniqueValuesByPath arr argument must be an Array, but received '${typeof arr}'`);
+    }
+    return arr.reduce((acc, el) => {
+        const elValue = accessObjectByString(path, el, separator);
+        if (!acc.includes(elValue)) {
+            acc.push(elValue);
+        }
+        return acc;
+    }, []);
+}
+
+export function getFilteredColumn(path, data, filters = [], separator) {
+    if (typeof filters !== 'object' || !Array.isArray(filters)) {
+        throw new Error(`Method getFilteredColumn filters argument must be an Array, but received '${typeof filters}'`);
+    }
+    return data.filter(el => filters.includes(String(accessObjectByString(path, el, separator))));
+}

@@ -1,5 +1,5 @@
 require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=App;var _lib=require("../lib");var _lib2=_interopRequireDefault(_lib);var _sampleData=require("./sampleData");function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}var _window=window,React=_window.React;function App(){return/*#__PURE__*/React.createElement(_lib2["default"],{data:_sampleData.SAMPLE_RESTAURANT_DATA,options:{columns:{name:{path:'name',lock:true},neighborhood:'neighborhood',cuisine_type:{path:'cuisine_type',lock:false},monday:'operating_hours.Monday',rating1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},rating1Month:{path:'reviews.1.rating',label:'Average ratings 1 month'},rating1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'},anotherShit1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},anotherShit1Month:{path:'reviews.1.rating',label:'Average ratings 1 month',lock:false},anotherShit1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'},randomRating1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},randomRating1Month:{path:'reviews.1.rating',label:'Average ratings 1 month'},randomRating1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'},anotherRating1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},anotherRating1Month:{path:'reviews.1.rating',label:'Average ratings 1 month'},anotherRating1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'},yetAnotherRating1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},yetAnotherRating1Month:{path:'reviews.1.rating',label:'Average ratings 1 month'},yetAnotherRating1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'}}}});}
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=App;var _lib=require("../lib");var _lib2=_interopRequireDefault(_lib);var _sampleData=require("./sampleData");function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}var _window=window,React=_window.React;function App(){return/*#__PURE__*/React.createElement(_lib2["default"],{data:_sampleData.SAMPLE_RESTAURANT_DATA,options:{columns:{name:{path:'name',lock:true},neighborhood:'neighborhood',cuisine_type:{path:'cuisine_type',lock:false},monday:'operating_hours.Monday',rating1Week:{path:'reviews.0.rating',label:'Average ratings 1 week'},rating1Month:{path:'reviews.1.rating',label:'Average ratings 1 month'},rating1Year:{path:'reviews.2.rating',label:'Average ratings 1 year'},anotherShit1Week:{path:'reviews.0.rating',label:'Another average ratings 1 week'},anotherShit1Month:{path:'reviews.1.rating',label:'Another average ratings 1 month',lock:false},anotherShit1Year:{path:'reviews.2.rating',label:'Another average ratings 1 year'},randomRating1Week:{path:'reviews.0.rating',label:'Random average ratings 1 week'},randomRating1Month:{path:'reviews.1.rating',label:'Random average ratings 1 month'},randomRating1Year:{path:'reviews.2.rating',label:'Random average ratings 1 year'},yetAnotherRating1Week:{path:'reviews.0.rating',label:'Yet another average ratings 1 week'},yetAnotherRating1Month:{path:'reviews.1.rating',label:'Yet another average ratings 1 month'},yetAnotherRating1Year:{path:'reviews.2.rating',label:'Yet another average ratings 1 year'},lastAnotherRating1Week:{path:'reviews.0.rating',label:'Last average ratings 1 week'},lastAnotherRating1Month:{path:'reviews.1.rating',label:'Last average ratings 1 month'},lastAnotherRating1Year:{path:'reviews.2.rating',label:'Last average ratings 1 year'}}}});}
 
 },{"../lib":"diffex","./sampleData":3}],2:[function(require,module,exports){
 "use strict";require("babel-polyfill");var _App=require("./App");var _App2=_interopRequireDefault(_App);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}var React=window.React;window.ReactDOM.render(/*#__PURE__*/React.createElement(_App2["default"],null),document.getElementById('root'));
@@ -8,7 +8,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
 "use strict";Object.defineProperty(exports,"__esModule",{value:true});var SAMPLE_RESTAURANT_DATA=exports.SAMPLE_RESTAURANT_DATA=[{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]},{id:1,name:'Mission Chinese Food',neighborhood:'Manhattan',photograph:'1.jpg',address:'171 E Broadway, New York, NY 10002',latlng:{lat:40.713829,lng:-73.989667},cuisine_type:'Asian',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 12:00 am',Wednesday:'5:30 pm - 12:00 am',Thursday:'5:30 pm - 12:00 am',Friday:'5:30 pm - 12:00 am',Saturday:'12:00 pm - 4:00 pm, 5:30 pm - 12:00 am',Sunday:'12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.'},{name:'Morgan',date:'October 26, 2016',rating:4,comments:'This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!'},{name:'Jason',date:'October 26, 2016',rating:3,comments:'I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff.'}]},{id:2,name:'Emily',neighborhood:'Brooklyn',photograph:'2.jpg',address:'919 Fulton St, Brooklyn, NY 11238',latlng:{lat:40.683555,lng:-73.966393},cuisine_type:'Pizza',operating_hours:{Monday:'5:30 pm - 11:00 pm',Tuesday:'5:30 pm - 11:00 pm',Wednesday:'5:30 pm - 11:00 pm',Thursday:'5:30 pm - 11:00 pm',Friday:'5:30 pm - 11:00 pm',Saturday:'5:00 pm - 11:30 pm',Sunday:'12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm'},reviews:[{name:'Steph',date:'October 26, 2016',rating:4,comments:'Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.'},{name:'Steve',date:'October 26, 2016',rating:4,comments:'This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city.'},{name:'Sam',date:'October 26, 2016',rating:5,comments:"5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."}]},{id:3,name:'Kang Ho Dong Baekjeong',neighborhood:'Manhattan',photograph:'3.jpg',address:'1 E 32nd St, New York, NY 10016',latlng:{lat:40.747143,lng:-73.985414},cuisine_type:'Asian',operating_hours:{Monday:'11:30 am - 2:00 am',Tuesday:'11:30 am - 2:00 am',Wednesday:'11:30 am - 2:00 am',Thursday:'11:30 am - 2:00 am',Friday:'11:30 am - 6:00 am',Saturday:'11:30 am - 6:00 am',Sunday:'11:30 am - 2:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.'},{name:'ZS',date:'October 26, 2016',rating:5,comments:"I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "},{name:'Emily',date:'October 26, 2016',rating:2,comments:"MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"}]},{id:4,name:"Katz's Delicatessen",neighborhood:'Manhattan',photograph:'4.jpg',address:'205 E Houston St, New York, NY 10002',latlng:{lat:40.722216,lng:-73.987501},cuisine_type:'American',operating_hours:{Monday:'8:00 am - 10:30 pm',Tuesday:'8:00 am - 10:30 pm',Wednesday:'8:00 am - 10:30 pm',Thursday:'8:00 am - 2:30 am',Friday:'8:00 am - Sat',Saturday:'Open 24 hours',Sunday:'Sat - 10:30 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."},{name:'Allen',date:'October 26, 2016',rating:5,comments:'If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!'},{name:'David',date:'October 26, 2016',rating:2,comments:"Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."}]},{id:5,name:"Roberta's Pizza",neighborhood:'Brooklyn',photograph:'5.jpg',address:'261 Moore St, Brooklyn, NY 11206',latlng:{lat:40.705089,lng:-73.933585},cuisine_type:'Pizza',operating_hours:{Monday:'11:00 am - 12:00 am',Tuesday:'11:00 am - 12:00 am',Wednesday:'11:00 am - 12:00 am',Thursday:'11:00 am - 12:00 am',Friday:'11:00 am - 12:00 am',Saturday:'10:00 am - 12:00 am',Sunday:'10:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."},{name:'Raymond',date:'October 26, 2016',rating:4,comments:"Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."},{name:'Laurel',date:'October 26, 2016',rating:4,comments:"The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"}]},{id:6,name:'Hometown BBQ',neighborhood:'Brooklyn',photograph:'6.jpg',address:'454 Van Brunt St, Brooklyn, NY 11231',latlng:{lat:40.674925,lng:-74.016162},cuisine_type:'American',operating_hours:{Monday:'Closed',Tuesday:'12:00 pm - 10:00 pm',Wednesday:'12:00 pm - 10:00 pm',Thursday:'12:00 pm - 10:00 pm',Friday:'12:00 pm - 11:00 pm',Saturday:'12:00 pm - 11:00 pm',Sunday:'12:00 pm - 9:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."},{name:'Michelle',date:'October 26, 2016',rating:4,comments:'Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!'},{name:'Ai-Mei',date:'October 26, 2016',rating:4,comments:"mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."}]},{id:7,name:'Superiority Burger',neighborhood:'Manhattan',photograph:'7.jpg',address:'430 E 9th St, New York, NY 10009',latlng:{lat:40.727397,lng:-73.983645},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 10:00 pm',Tuesday:'Closed',Wednesday:'11:30 am - 10:00 pm',Thursday:'11:30 am - 10:00 pm',Friday:'11:30 am - 10:00 pm',Saturday:'11:30 am - 10:00 pm',Sunday:'11:30 am - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:"Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."},{name:'Gabriel',date:'October 26, 2016',rating:5,comments:"I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"},{name:'Shivi',date:'October 26, 2016',rating:4,comments:'Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly.'}]},{id:8,name:'The Dutch',neighborhood:'Manhattan',photograph:'8.jpg',address:'131 Sullivan St, New York, NY 10012',latlng:{lat:40.726584,lng:-74.002082},cuisine_type:'American',operating_hours:{Monday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Tuesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Wednesday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Thursday:'11:30 am - 3:00 pm, 5:30 pm - 11:00 pm',Friday:'11:30 am - 3:00 pm, 5:30 pm - 11:30 pm',Saturday:'10:00 am - 3:00 pm, 5:30 pm - 11:30 pm',Sunday:'10:00 am - 3:00 pm, 5:30 pm - 11:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape.'},{name:'Loren',date:'October 26, 2016',rating:4,comments:'I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again.'},{name:'Lori',date:'October 26, 2016',rating:4,comments:"Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."}]},{id:9,name:'Mu Ramen',neighborhood:'Queens',photograph:'9.jpg',address:'1209 Jackson Ave, Queens, NY 11101',latlng:{lat:40.743797,lng:-73.950652},cuisine_type:'Asian',operating_hours:{Monday:'5:00 pm - 10:00 pm',Tuesday:'5:00 pm - 10:00 pm',Wednesday:'5:00 pm - 10:00 pm',Thursday:'5:00 pm - 10:00 pm',Friday:'5:00 pm - 11:00 pm',Saturday:'5:00 pm - 11:00 pm',Sunday:'5:00 pm - 10:00 pm'},reviews:[{name:'Steve',date:'October 26, 2016',rating:4,comments:'Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train.'},{name:'Brittany',date:'October 26, 2016',rating:4,comments:"Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."},{name:'Sally',date:'October 26, 2016',rating:4,comments:"One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."}]},{id:10,name:'Casa Enrique',neighborhood:'Queens',photograph:'10.jpg',address:'5-48 49th Ave, Queens, NY 11101',latlng:{lat:40.743394,lng:-73.954235},cuisine_type:'Mexican',operating_hours:{Monday:'5:00 pm - 12:00 am',Tuesday:'5:00 pm - 12:00 am',Wednesday:'5:00 pm - 12:00 am',Thursday:'5:00 pm - 12:00 am',Friday:'5:00 pm - 12:00 am',Saturday:'11:00 am - 12:00 am',Sunday:'11:00 am - 12:00 am'},reviews:[{name:'Steve',date:'October 26, 2016',rating:5,comments:"Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."},{name:'Rob',date:'October 26, 2016',rating:5,comments:"The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"},{name:'Jason',date:'October 26, 2016',rating:4,comments:"For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."}]}];
 
 },{}],4:[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.accessObjectByString=accessObjectByString;function accessObjectByString(path,obj){var separator=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'.';// let val = o;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.accessObjectByString=accessObjectByString;exports.getUniqueValuesByPath=getUniqueValuesByPath;exports.getFilteredColumn=getFilteredColumn;function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function accessObjectByString(path,obj){var separator=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'.';// let val = o;
 // s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
 // s = s.replace(/^\./, ''); // strip a leading dot
 // const a = s.split('.');
@@ -21,7 +21,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
 //     }
 // }
 // return val;
-var properties=Array.isArray(path)?path:path.split(separator);return properties.reduce(function(prev,curr){return prev&&prev[curr];},obj);}
+var properties=Array.isArray(path)?path:path.split(separator);return properties.reduce(function(prev,curr){return prev&&prev[curr];},obj);}function getUniqueValuesByPath(path,arr){var separator=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'.';if(typeof arr==='undefined'){throw new Error('Cant call getUniqueValuesByPath with an undefined iterator');}if(_typeof(arr)!=='object'&&!Array.isArray(arr)){throw new Error("Method getUniqueValuesByPath arr argument must be an Array, but received '".concat(_typeof(arr),"'"));}return arr.reduce(function(acc,el){var elValue=accessObjectByString(path,el,separator);if(!acc.includes(elValue)){acc.push(elValue);}return acc;},[]);}function getFilteredColumn(path,data){var filters=arguments.length>2&&arguments[2]!==undefined?arguments[2]:[];var separator=arguments.length>3?arguments[3]:undefined;if(_typeof(filters)!=='object'||!Array.isArray(filters)){throw new Error("Method getFilteredColumn filters argument must be an Array, but received '".concat(_typeof(filters),"'"));}return data.filter(function(el){return filters.includes(String(accessObjectByString(path,el,separator)));});}
 
 },{}],5:[function(require,module,exports){
 (function (global){(function (){
@@ -7994,7 +7994,1781 @@ require('./modules/web.immediate');
 require('./modules/web.dom.iterable');
 module.exports = require('./modules/_core');
 
-},{"./modules/_core":29,"./modules/es6.array.copy-within":138,"./modules/es6.array.every":139,"./modules/es6.array.fill":140,"./modules/es6.array.filter":141,"./modules/es6.array.find":143,"./modules/es6.array.find-index":142,"./modules/es6.array.for-each":144,"./modules/es6.array.from":145,"./modules/es6.array.index-of":146,"./modules/es6.array.is-array":147,"./modules/es6.array.iterator":148,"./modules/es6.array.join":149,"./modules/es6.array.last-index-of":150,"./modules/es6.array.map":151,"./modules/es6.array.of":152,"./modules/es6.array.reduce":154,"./modules/es6.array.reduce-right":153,"./modules/es6.array.slice":155,"./modules/es6.array.some":156,"./modules/es6.array.sort":157,"./modules/es6.array.species":158,"./modules/es6.date.now":159,"./modules/es6.date.to-iso-string":160,"./modules/es6.date.to-json":161,"./modules/es6.date.to-primitive":162,"./modules/es6.date.to-string":163,"./modules/es6.function.bind":164,"./modules/es6.function.has-instance":165,"./modules/es6.function.name":166,"./modules/es6.map":167,"./modules/es6.math.acosh":168,"./modules/es6.math.asinh":169,"./modules/es6.math.atanh":170,"./modules/es6.math.cbrt":171,"./modules/es6.math.clz32":172,"./modules/es6.math.cosh":173,"./modules/es6.math.expm1":174,"./modules/es6.math.fround":175,"./modules/es6.math.hypot":176,"./modules/es6.math.imul":177,"./modules/es6.math.log10":178,"./modules/es6.math.log1p":179,"./modules/es6.math.log2":180,"./modules/es6.math.sign":181,"./modules/es6.math.sinh":182,"./modules/es6.math.tanh":183,"./modules/es6.math.trunc":184,"./modules/es6.number.constructor":185,"./modules/es6.number.epsilon":186,"./modules/es6.number.is-finite":187,"./modules/es6.number.is-integer":188,"./modules/es6.number.is-nan":189,"./modules/es6.number.is-safe-integer":190,"./modules/es6.number.max-safe-integer":191,"./modules/es6.number.min-safe-integer":192,"./modules/es6.number.parse-float":193,"./modules/es6.number.parse-int":194,"./modules/es6.number.to-fixed":195,"./modules/es6.number.to-precision":196,"./modules/es6.object.assign":197,"./modules/es6.object.create":198,"./modules/es6.object.define-properties":199,"./modules/es6.object.define-property":200,"./modules/es6.object.freeze":201,"./modules/es6.object.get-own-property-descriptor":202,"./modules/es6.object.get-own-property-names":203,"./modules/es6.object.get-prototype-of":204,"./modules/es6.object.is":208,"./modules/es6.object.is-extensible":205,"./modules/es6.object.is-frozen":206,"./modules/es6.object.is-sealed":207,"./modules/es6.object.keys":209,"./modules/es6.object.prevent-extensions":210,"./modules/es6.object.seal":211,"./modules/es6.object.set-prototype-of":212,"./modules/es6.object.to-string":213,"./modules/es6.parse-float":214,"./modules/es6.parse-int":215,"./modules/es6.promise":216,"./modules/es6.reflect.apply":217,"./modules/es6.reflect.construct":218,"./modules/es6.reflect.define-property":219,"./modules/es6.reflect.delete-property":220,"./modules/es6.reflect.enumerate":221,"./modules/es6.reflect.get":224,"./modules/es6.reflect.get-own-property-descriptor":222,"./modules/es6.reflect.get-prototype-of":223,"./modules/es6.reflect.has":225,"./modules/es6.reflect.is-extensible":226,"./modules/es6.reflect.own-keys":227,"./modules/es6.reflect.prevent-extensions":228,"./modules/es6.reflect.set":230,"./modules/es6.reflect.set-prototype-of":229,"./modules/es6.regexp.constructor":231,"./modules/es6.regexp.exec":232,"./modules/es6.regexp.flags":233,"./modules/es6.regexp.match":234,"./modules/es6.regexp.replace":235,"./modules/es6.regexp.search":236,"./modules/es6.regexp.split":237,"./modules/es6.regexp.to-string":238,"./modules/es6.set":239,"./modules/es6.string.anchor":240,"./modules/es6.string.big":241,"./modules/es6.string.blink":242,"./modules/es6.string.bold":243,"./modules/es6.string.code-point-at":244,"./modules/es6.string.ends-with":245,"./modules/es6.string.fixed":246,"./modules/es6.string.fontcolor":247,"./modules/es6.string.fontsize":248,"./modules/es6.string.from-code-point":249,"./modules/es6.string.includes":250,"./modules/es6.string.italics":251,"./modules/es6.string.iterator":252,"./modules/es6.string.link":253,"./modules/es6.string.raw":254,"./modules/es6.string.repeat":255,"./modules/es6.string.small":256,"./modules/es6.string.starts-with":257,"./modules/es6.string.strike":258,"./modules/es6.string.sub":259,"./modules/es6.string.sup":260,"./modules/es6.string.trim":261,"./modules/es6.symbol":262,"./modules/es6.typed.array-buffer":263,"./modules/es6.typed.data-view":264,"./modules/es6.typed.float32-array":265,"./modules/es6.typed.float64-array":266,"./modules/es6.typed.int16-array":267,"./modules/es6.typed.int32-array":268,"./modules/es6.typed.int8-array":269,"./modules/es6.typed.uint16-array":270,"./modules/es6.typed.uint32-array":271,"./modules/es6.typed.uint8-array":272,"./modules/es6.typed.uint8-clamped-array":273,"./modules/es6.weak-map":274,"./modules/es6.weak-set":275,"./modules/es7.array.flat-map":276,"./modules/es7.array.flatten":277,"./modules/es7.array.includes":278,"./modules/es7.asap":279,"./modules/es7.error.is-error":280,"./modules/es7.global":281,"./modules/es7.map.from":282,"./modules/es7.map.of":283,"./modules/es7.map.to-json":284,"./modules/es7.math.clamp":285,"./modules/es7.math.deg-per-rad":286,"./modules/es7.math.degrees":287,"./modules/es7.math.fscale":288,"./modules/es7.math.iaddh":289,"./modules/es7.math.imulh":290,"./modules/es7.math.isubh":291,"./modules/es7.math.rad-per-deg":292,"./modules/es7.math.radians":293,"./modules/es7.math.scale":294,"./modules/es7.math.signbit":295,"./modules/es7.math.umulh":296,"./modules/es7.object.define-getter":297,"./modules/es7.object.define-setter":298,"./modules/es7.object.entries":299,"./modules/es7.object.get-own-property-descriptors":300,"./modules/es7.object.lookup-getter":301,"./modules/es7.object.lookup-setter":302,"./modules/es7.object.values":303,"./modules/es7.observable":304,"./modules/es7.promise.finally":305,"./modules/es7.promise.try":306,"./modules/es7.reflect.define-metadata":307,"./modules/es7.reflect.delete-metadata":308,"./modules/es7.reflect.get-metadata":310,"./modules/es7.reflect.get-metadata-keys":309,"./modules/es7.reflect.get-own-metadata":312,"./modules/es7.reflect.get-own-metadata-keys":311,"./modules/es7.reflect.has-metadata":313,"./modules/es7.reflect.has-own-metadata":314,"./modules/es7.reflect.metadata":315,"./modules/es7.set.from":316,"./modules/es7.set.of":317,"./modules/es7.set.to-json":318,"./modules/es7.string.at":319,"./modules/es7.string.match-all":320,"./modules/es7.string.pad-end":321,"./modules/es7.string.pad-start":322,"./modules/es7.string.trim-left":323,"./modules/es7.string.trim-right":324,"./modules/es7.symbol.async-iterator":325,"./modules/es7.symbol.observable":326,"./modules/es7.system.global":327,"./modules/es7.weak-map.from":328,"./modules/es7.weak-map.of":329,"./modules/es7.weak-set.from":330,"./modules/es7.weak-set.of":331,"./modules/web.dom.iterable":332,"./modules/web.immediate":333,"./modules/web.timers":334}],"diffex":[function(require,module,exports){
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=ReactTabularGrid;var _pathutils=require("./services/pathutils");function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){if(typeof Symbol==="undefined"||!(Symbol.iterator in Object(arr)))return;var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}var _window=window,React=_window.React;function ReactTabularGrid(_ref){var data=_ref.data,options=_ref.options;var _React$useState=React.useState([]),_React$useState2=_slicedToArray(_React$useState,2),columns=_React$useState2[0],setColumns=_React$useState2[1];React.useEffect(function(){var newColumns=Object.keys(options.columns).map(function(key){var base={name:key};if(typeof options.columns[key]==='string'){base.path=options.columns[key];base.type='string';base.lock=false;base.hide=false;base.label=base.name;}else if(_typeof(options.columns[key])==='object'){var _options$columns$key=options.columns[key],path=_options$columns$key.path,_options$columns$key$=_options$columns$key.type,type=_options$columns$key$===void 0?'string':_options$columns$key$,_options$columns$key$2=_options$columns$key.lock,lock=_options$columns$key$2===void 0?false:_options$columns$key$2,_options$columns$key$3=_options$columns$key.hide,hide=_options$columns$key$3===void 0?false:_options$columns$key$3,_options$columns$key$4=_options$columns$key.label,label=_options$columns$key$4===void 0?base.name:_options$columns$key$4;base.path=path;base.type=type;base.lock=lock;base.hide=hide;base.label=label;}return base;});setColumns(newColumns);},[JSON.stringify({data:data,options:options})]);return/*#__PURE__*/React.createElement(ColumnsComponent,{options:options,columns:columns,data:data});}function ColumnsComponent(_ref2){var _ref2$options=_ref2.options;_ref2$options=_ref2$options===void 0?{}:_ref2$options;var _ref2$options$icons=_ref2$options.icons;_ref2$options$icons=_ref2$options$icons===void 0?{}:_ref2$options$icons;var _ref2$options$icons$l=_ref2$options$icons.lock;_ref2$options$icons$l=_ref2$options$icons$l===void 0?{}:_ref2$options$icons$l;var _ref2$options$icons$l2=_ref2$options$icons$l.on,lockIconOn=_ref2$options$icons$l2===void 0?'fas fa-lock':_ref2$options$icons$l2,_ref2$options$icons$l3=_ref2$options$icons$l.off,lockIconOff=_ref2$options$icons$l3===void 0?'fas fa-lock-open':_ref2$options$icons$l3,data=_ref2.data,columns=_ref2.columns;var _React$useState3=React.useState(columns),_React$useState4=_slicedToArray(_React$useState3,2),config=_React$useState4[0],setConfig=_React$useState4[1];var _React$useState5=React.useState(false),_React$useState6=_slicedToArray(_React$useState5,2),settingsStatus=_React$useState6[0],setSettingsStatus=_React$useState6[1];React.useEffect(function(){var currentConfig=config.map(function(el){return _objectSpread({},el);});var newConfig=columns;if(currentConfig.length===0){setConfig(newConfig);}else{var populated=currentConfig.reduce(function(acc,el){var prevColIndex=newConfig.findIndex(function(_ref3){var name=_ref3.name;return name===el.name;});if(prevColIndex===-1){return acc;}var name=el.name;var _newConfig$prevColInd=newConfig[prevColIndex],label=_newConfig$prevColInd.label,path=_newConfig$prevColInd.path,hide=_newConfig$prevColInd.hide,lock=_newConfig$prevColInd.lock;var newEl={name:name,hide:el.hide!==undefined?el.hide:hide,label:el.label!==undefined?el.label:label,lock:el.lock!==undefined?el.lock:lock,path:path};acc.push(newEl);},[]);setConfig(populated);}},[JSON.stringify({columns:columns})]);function manageToggleLock(columnName){var newConfig=config.map(function(el){if(el.name===columnName){return _objectSpread(_objectSpread({},el),{},{lock:!el.lock});}return el;});setConfig(newConfig);}function renderColumn(_ref4,columnIndex){var name=_ref4.name,path=_ref4.path,type=_ref4.type,label=_ref4.label,lock=_ref4.lock;var header=label||name;return/*#__PURE__*/React.createElement("div",{className:"tabular-column",id:header,key:"".concat(header,"-COLUMN"),"data-index":columnIndex},/*#__PURE__*/React.createElement("div",{className:"tabular-header"},/*#__PURE__*/React.createElement("span",{className:"header-label"},header),/*#__PURE__*/React.createElement("div",{className:"header-actions"},/*#__PURE__*/React.createElement("i",{className:lock?lockIconOn:lockIconOff,onClick:function onClick(){return manageToggleLock(name);}}))),data.map(function(el,index){return/*#__PURE__*/React.createElement("div",{className:"tabular-cell",key:"".concat(header,"-ROW-").concat(index)},(0,_pathutils.accessObjectByString)(path,el));}));}var lockedColumns=config.filter(function(column){return column.lock;});var unlockedColumns=config.filter(function(column){return!column.lock;});return/*#__PURE__*/React.createElement("div",{className:"tabular-container"},lockedColumns.length>=1&&/*#__PURE__*/React.createElement("div",{className:"locked-columns__container"},lockedColumns.map(renderColumn)),unlockedColumns.map(renderColumn),/*#__PURE__*/React.createElement("div",{className:"options-container","data-toggled":settingsStatus},settingsStatus?/*#__PURE__*/React.createElement("div",{className:"tabular-settings"},/*#__PURE__*/React.createElement("i",{className:"fa fa-times close-settings",onClick:function onClick(){return setSettingsStatus(false);}}),config.map(function(_ref5){var name=_ref5.name,label=_ref5.label,lock=_ref5.lock,hide=_ref5.hide;return/*#__PURE__*/React.createElement("div",{className:"tabular-settings__item"},/*#__PURE__*/React.createElement("span",null,label),/*#__PURE__*/React.createElement("i",{className:lock?lockIconOn:lockIconOff,onClick:function onClick(){return manageToggleLock(name);}}));})):/*#__PURE__*/React.createElement("i",{className:"fa fa-cog open-settings",onClick:function onClick(){return setSettingsStatus(true);}})));}
+},{"./modules/_core":29,"./modules/es6.array.copy-within":138,"./modules/es6.array.every":139,"./modules/es6.array.fill":140,"./modules/es6.array.filter":141,"./modules/es6.array.find":143,"./modules/es6.array.find-index":142,"./modules/es6.array.for-each":144,"./modules/es6.array.from":145,"./modules/es6.array.index-of":146,"./modules/es6.array.is-array":147,"./modules/es6.array.iterator":148,"./modules/es6.array.join":149,"./modules/es6.array.last-index-of":150,"./modules/es6.array.map":151,"./modules/es6.array.of":152,"./modules/es6.array.reduce":154,"./modules/es6.array.reduce-right":153,"./modules/es6.array.slice":155,"./modules/es6.array.some":156,"./modules/es6.array.sort":157,"./modules/es6.array.species":158,"./modules/es6.date.now":159,"./modules/es6.date.to-iso-string":160,"./modules/es6.date.to-json":161,"./modules/es6.date.to-primitive":162,"./modules/es6.date.to-string":163,"./modules/es6.function.bind":164,"./modules/es6.function.has-instance":165,"./modules/es6.function.name":166,"./modules/es6.map":167,"./modules/es6.math.acosh":168,"./modules/es6.math.asinh":169,"./modules/es6.math.atanh":170,"./modules/es6.math.cbrt":171,"./modules/es6.math.clz32":172,"./modules/es6.math.cosh":173,"./modules/es6.math.expm1":174,"./modules/es6.math.fround":175,"./modules/es6.math.hypot":176,"./modules/es6.math.imul":177,"./modules/es6.math.log10":178,"./modules/es6.math.log1p":179,"./modules/es6.math.log2":180,"./modules/es6.math.sign":181,"./modules/es6.math.sinh":182,"./modules/es6.math.tanh":183,"./modules/es6.math.trunc":184,"./modules/es6.number.constructor":185,"./modules/es6.number.epsilon":186,"./modules/es6.number.is-finite":187,"./modules/es6.number.is-integer":188,"./modules/es6.number.is-nan":189,"./modules/es6.number.is-safe-integer":190,"./modules/es6.number.max-safe-integer":191,"./modules/es6.number.min-safe-integer":192,"./modules/es6.number.parse-float":193,"./modules/es6.number.parse-int":194,"./modules/es6.number.to-fixed":195,"./modules/es6.number.to-precision":196,"./modules/es6.object.assign":197,"./modules/es6.object.create":198,"./modules/es6.object.define-properties":199,"./modules/es6.object.define-property":200,"./modules/es6.object.freeze":201,"./modules/es6.object.get-own-property-descriptor":202,"./modules/es6.object.get-own-property-names":203,"./modules/es6.object.get-prototype-of":204,"./modules/es6.object.is":208,"./modules/es6.object.is-extensible":205,"./modules/es6.object.is-frozen":206,"./modules/es6.object.is-sealed":207,"./modules/es6.object.keys":209,"./modules/es6.object.prevent-extensions":210,"./modules/es6.object.seal":211,"./modules/es6.object.set-prototype-of":212,"./modules/es6.object.to-string":213,"./modules/es6.parse-float":214,"./modules/es6.parse-int":215,"./modules/es6.promise":216,"./modules/es6.reflect.apply":217,"./modules/es6.reflect.construct":218,"./modules/es6.reflect.define-property":219,"./modules/es6.reflect.delete-property":220,"./modules/es6.reflect.enumerate":221,"./modules/es6.reflect.get":224,"./modules/es6.reflect.get-own-property-descriptor":222,"./modules/es6.reflect.get-prototype-of":223,"./modules/es6.reflect.has":225,"./modules/es6.reflect.is-extensible":226,"./modules/es6.reflect.own-keys":227,"./modules/es6.reflect.prevent-extensions":228,"./modules/es6.reflect.set":230,"./modules/es6.reflect.set-prototype-of":229,"./modules/es6.regexp.constructor":231,"./modules/es6.regexp.exec":232,"./modules/es6.regexp.flags":233,"./modules/es6.regexp.match":234,"./modules/es6.regexp.replace":235,"./modules/es6.regexp.search":236,"./modules/es6.regexp.split":237,"./modules/es6.regexp.to-string":238,"./modules/es6.set":239,"./modules/es6.string.anchor":240,"./modules/es6.string.big":241,"./modules/es6.string.blink":242,"./modules/es6.string.bold":243,"./modules/es6.string.code-point-at":244,"./modules/es6.string.ends-with":245,"./modules/es6.string.fixed":246,"./modules/es6.string.fontcolor":247,"./modules/es6.string.fontsize":248,"./modules/es6.string.from-code-point":249,"./modules/es6.string.includes":250,"./modules/es6.string.italics":251,"./modules/es6.string.iterator":252,"./modules/es6.string.link":253,"./modules/es6.string.raw":254,"./modules/es6.string.repeat":255,"./modules/es6.string.small":256,"./modules/es6.string.starts-with":257,"./modules/es6.string.strike":258,"./modules/es6.string.sub":259,"./modules/es6.string.sup":260,"./modules/es6.string.trim":261,"./modules/es6.symbol":262,"./modules/es6.typed.array-buffer":263,"./modules/es6.typed.data-view":264,"./modules/es6.typed.float32-array":265,"./modules/es6.typed.float64-array":266,"./modules/es6.typed.int16-array":267,"./modules/es6.typed.int32-array":268,"./modules/es6.typed.int8-array":269,"./modules/es6.typed.uint16-array":270,"./modules/es6.typed.uint32-array":271,"./modules/es6.typed.uint8-array":272,"./modules/es6.typed.uint8-clamped-array":273,"./modules/es6.weak-map":274,"./modules/es6.weak-set":275,"./modules/es7.array.flat-map":276,"./modules/es7.array.flatten":277,"./modules/es7.array.includes":278,"./modules/es7.asap":279,"./modules/es7.error.is-error":280,"./modules/es7.global":281,"./modules/es7.map.from":282,"./modules/es7.map.of":283,"./modules/es7.map.to-json":284,"./modules/es7.math.clamp":285,"./modules/es7.math.deg-per-rad":286,"./modules/es7.math.degrees":287,"./modules/es7.math.fscale":288,"./modules/es7.math.iaddh":289,"./modules/es7.math.imulh":290,"./modules/es7.math.isubh":291,"./modules/es7.math.rad-per-deg":292,"./modules/es7.math.radians":293,"./modules/es7.math.scale":294,"./modules/es7.math.signbit":295,"./modules/es7.math.umulh":296,"./modules/es7.object.define-getter":297,"./modules/es7.object.define-setter":298,"./modules/es7.object.entries":299,"./modules/es7.object.get-own-property-descriptors":300,"./modules/es7.object.lookup-getter":301,"./modules/es7.object.lookup-setter":302,"./modules/es7.object.values":303,"./modules/es7.observable":304,"./modules/es7.promise.finally":305,"./modules/es7.promise.try":306,"./modules/es7.reflect.define-metadata":307,"./modules/es7.reflect.delete-metadata":308,"./modules/es7.reflect.get-metadata":310,"./modules/es7.reflect.get-metadata-keys":309,"./modules/es7.reflect.get-own-metadata":312,"./modules/es7.reflect.get-own-metadata-keys":311,"./modules/es7.reflect.has-metadata":313,"./modules/es7.reflect.has-own-metadata":314,"./modules/es7.reflect.metadata":315,"./modules/es7.set.from":316,"./modules/es7.set.of":317,"./modules/es7.set.to-json":318,"./modules/es7.string.at":319,"./modules/es7.string.match-all":320,"./modules/es7.string.pad-end":321,"./modules/es7.string.pad-start":322,"./modules/es7.string.trim-left":323,"./modules/es7.string.trim-right":324,"./modules/es7.symbol.async-iterator":325,"./modules/es7.symbol.observable":326,"./modules/es7.system.global":327,"./modules/es7.weak-map.from":328,"./modules/es7.weak-map.of":329,"./modules/es7.weak-set.from":330,"./modules/es7.weak-set.of":331,"./modules/web.dom.iterable":332,"./modules/web.immediate":333,"./modules/web.timers":334}],336:[function(require,module,exports){
+(function (global){(function (){
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
 
-},{"./services/pathutils":4}]},{},[2]);
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to match `RegExp` flags from their coerced string values. */
+var reFlags = /\w*$/;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values supported by `_.clone`. */
+var cloneableTags = {};
+cloneableTags[argsTag] = cloneableTags[arrayTag] =
+cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] =
+cloneableTags[boolTag] = cloneableTags[dateTag] =
+cloneableTags[float32Tag] = cloneableTags[float64Tag] =
+cloneableTags[int8Tag] = cloneableTags[int16Tag] =
+cloneableTags[int32Tag] = cloneableTags[mapTag] =
+cloneableTags[numberTag] = cloneableTags[objectTag] =
+cloneableTags[regexpTag] = cloneableTags[setTag] =
+cloneableTags[stringTag] = cloneableTags[symbolTag] =
+cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] =
+cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] =
+cloneableTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/**
+ * Adds the key-value `pair` to `map`.
+ *
+ * @private
+ * @param {Object} map The map to modify.
+ * @param {Array} pair The key-value pair to add.
+ * @returns {Object} Returns `map`.
+ */
+function addMapEntry(map, pair) {
+  // Don't return `map.set` because it's not chainable in IE 11.
+  map.set(pair[0], pair[1]);
+  return map;
+}
+
+/**
+ * Adds `value` to `set`.
+ *
+ * @private
+ * @param {Object} set The set to modify.
+ * @param {*} value The value to add.
+ * @returns {Object} Returns `set`.
+ */
+function addSetEntry(set, value) {
+  // Don't return `set.add` because it's not chainable in IE 11.
+  set.add(value);
+  return set;
+}
+
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */
+function arrayEach(array, iteratee) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  while (++index < length) {
+    if (iteratee(array[index], index, array) === false) {
+      break;
+    }
+  }
+  return array;
+}
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.reduce` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {*} [accumulator] The initial value.
+ * @param {boolean} [initAccum] Specify using the first element of `array` as
+ *  the initial value.
+ * @returns {*} Returns the accumulated value.
+ */
+function arrayReduce(array, iteratee, accumulator, initAccum) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  if (initAccum && length) {
+    accumulator = array[++index];
+  }
+  while (++index < length) {
+    accumulator = iteratee(accumulator, array[index], index, array);
+  }
+  return accumulator;
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined,
+    Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    getPrototype = overArg(Object.getPrototypeOf, Object),
+    objectCreate = Object.create,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  return this.has(key) && delete this.__data__[key];
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  return getMapData(this, key)['delete'](key);
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  getMapData(this, key).set(key, value);
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  this.__data__ = new ListCache(entries);
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  return this.__data__['delete'](key);
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var cache = this.__data__;
+  if (cache instanceof ListCache) {
+    var pairs = cache.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      return this;
+    }
+    cache = this.__data__ = new MapCache(pairs);
+  }
+  cache.set(key, value);
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  // Safari 9 makes `arguments.length` enumerable in strict mode.
+  var result = (isArray(value) || isArguments(value))
+    ? baseTimes(value.length, String)
+    : [];
+
+  var length = result.length,
+      skipIndexes = !!length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */
+function assignValue(object, key, value) {
+  var objValue = object[key];
+  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
+      (value === undefined && !(key in object))) {
+    object[key] = value;
+  }
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */
+function baseAssign(object, source) {
+  return object && copyObject(source, keys(source), object);
+}
+
+/**
+ * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+ * traversed objects.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @param {boolean} [isFull] Specify a clone including symbols.
+ * @param {Function} [customizer] The function to customize cloning.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The parent object of `value`.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @returns {*} Returns the cloned value.
+ */
+function baseClone(value, isDeep, isFull, customizer, key, object, stack) {
+  var result;
+  if (customizer) {
+    result = object ? customizer(value, key, object, stack) : customizer(value);
+  }
+  if (result !== undefined) {
+    return result;
+  }
+  if (!isObject(value)) {
+    return value;
+  }
+  var isArr = isArray(value);
+  if (isArr) {
+    result = initCloneArray(value);
+    if (!isDeep) {
+      return copyArray(value, result);
+    }
+  } else {
+    var tag = getTag(value),
+        isFunc = tag == funcTag || tag == genTag;
+
+    if (isBuffer(value)) {
+      return cloneBuffer(value, isDeep);
+    }
+    if (tag == objectTag || tag == argsTag || (isFunc && !object)) {
+      if (isHostObject(value)) {
+        return object ? value : {};
+      }
+      result = initCloneObject(isFunc ? {} : value);
+      if (!isDeep) {
+        return copySymbols(value, baseAssign(result, value));
+      }
+    } else {
+      if (!cloneableTags[tag]) {
+        return object ? value : {};
+      }
+      result = initCloneByTag(value, tag, baseClone, isDeep);
+    }
+  }
+  // Check for circular references and return its corresponding clone.
+  stack || (stack = new Stack);
+  var stacked = stack.get(value);
+  if (stacked) {
+    return stacked;
+  }
+  stack.set(value, result);
+
+  if (!isArr) {
+    var props = isFull ? getAllKeys(value) : keys(value);
+  }
+  arrayEach(props || value, function(subValue, key) {
+    if (props) {
+      key = subValue;
+      subValue = value[key];
+    }
+    // Recursively populate clone (susceptible to call stack limits).
+    assignValue(result, key, baseClone(subValue, isDeep, isFull, customizer, key, value, stack));
+  });
+  return result;
+}
+
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} prototype The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */
+function baseCreate(proto) {
+  return isObject(proto) ? objectCreate(proto) : {};
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  return objectToString.call(value);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */
+function cloneBuffer(buffer, isDeep) {
+  if (isDeep) {
+    return buffer.slice();
+  }
+  var result = new buffer.constructor(buffer.length);
+  buffer.copy(result);
+  return result;
+}
+
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */
+function cloneArrayBuffer(arrayBuffer) {
+  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+  new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+  return result;
+}
+
+/**
+ * Creates a clone of `dataView`.
+ *
+ * @private
+ * @param {Object} dataView The data view to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned data view.
+ */
+function cloneDataView(dataView, isDeep) {
+  var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+  return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+}
+
+/**
+ * Creates a clone of `map`.
+ *
+ * @private
+ * @param {Object} map The map to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned map.
+ */
+function cloneMap(map, isDeep, cloneFunc) {
+  var array = isDeep ? cloneFunc(mapToArray(map), true) : mapToArray(map);
+  return arrayReduce(array, addMapEntry, new map.constructor);
+}
+
+/**
+ * Creates a clone of `regexp`.
+ *
+ * @private
+ * @param {Object} regexp The regexp to clone.
+ * @returns {Object} Returns the cloned regexp.
+ */
+function cloneRegExp(regexp) {
+  var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+  result.lastIndex = regexp.lastIndex;
+  return result;
+}
+
+/**
+ * Creates a clone of `set`.
+ *
+ * @private
+ * @param {Object} set The set to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned set.
+ */
+function cloneSet(set, isDeep, cloneFunc) {
+  var array = isDeep ? cloneFunc(setToArray(set), true) : setToArray(set);
+  return arrayReduce(array, addSetEntry, new set.constructor);
+}
+
+/**
+ * Creates a clone of the `symbol` object.
+ *
+ * @private
+ * @param {Object} symbol The symbol object to clone.
+ * @returns {Object} Returns the cloned symbol object.
+ */
+function cloneSymbol(symbol) {
+  return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};
+}
+
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */
+function cloneTypedArray(typedArray, isDeep) {
+  var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+  return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */
+function copyArray(source, array) {
+  var index = -1,
+      length = source.length;
+
+  array || (array = Array(length));
+  while (++index < length) {
+    array[index] = source[index];
+  }
+  return array;
+}
+
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */
+function copyObject(source, props, object, customizer) {
+  object || (object = {});
+
+  var index = -1,
+      length = props.length;
+
+  while (++index < length) {
+    var key = props[index];
+
+    var newValue = customizer
+      ? customizer(object[key], source[key], key, object, source)
+      : undefined;
+
+    assignValue(object, key, newValue === undefined ? source[key] : newValue);
+  }
+  return object;
+}
+
+/**
+ * Copies own symbol properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */
+function copySymbols(source, object) {
+  return copyObject(source, getSymbols(source), object);
+}
+
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeys(object) {
+  return baseGetAllKeys(object, keys, getSymbols);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Creates an array of the own enumerable symbol properties of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = nativeGetSymbols ? overArg(nativeGetSymbols, Object) : stubArray;
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11,
+// for data views in Edge < 14, and promises in Node.js.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */
+function initCloneArray(array) {
+  var length = array.length,
+      result = array.constructor(length);
+
+  // Add properties assigned by `RegExp#exec`.
+  if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+    result.index = array.index;
+    result.input = array.input;
+  }
+  return result;
+}
+
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneObject(object) {
+  return (typeof object.constructor == 'function' && !isPrototype(object))
+    ? baseCreate(getPrototype(object))
+    : {};
+}
+
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneByTag(object, tag, cloneFunc, isDeep) {
+  var Ctor = object.constructor;
+  switch (tag) {
+    case arrayBufferTag:
+      return cloneArrayBuffer(object);
+
+    case boolTag:
+    case dateTag:
+      return new Ctor(+object);
+
+    case dataViewTag:
+      return cloneDataView(object, isDeep);
+
+    case float32Tag: case float64Tag:
+    case int8Tag: case int16Tag: case int32Tag:
+    case uint8Tag: case uint8ClampedTag: case uint16Tag: case uint32Tag:
+      return cloneTypedArray(object, isDeep);
+
+    case mapTag:
+      return cloneMap(object, isDeep, cloneFunc);
+
+    case numberTag:
+    case stringTag:
+      return new Ctor(object);
+
+    case regexpTag:
+      return cloneRegExp(object);
+
+    case setTag:
+      return cloneSet(object, isDeep, cloneFunc);
+
+    case symbolTag:
+      return cloneSymbol(object);
+  }
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * This method is like `_.clone` except that it recursively clones `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.0.0
+ * @category Lang
+ * @param {*} value The value to recursively clone.
+ * @returns {*} Returns the deep cloned value.
+ * @see _.clone
+ * @example
+ *
+ * var objects = [{ 'a': 1 }, { 'b': 2 }];
+ *
+ * var deep = _.cloneDeep(objects);
+ * console.log(deep[0] === objects[0]);
+ * // => false
+ */
+function cloneDeep(value) {
+  return baseClone(value, true, true);
+}
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+function isArguments(value) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = cloneDeep;
+
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],"diffex":[function(require,module,exports){
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=ReactTabularGrid;var _lodash=require("lodash.clonedeep");var _lodash2=_interopRequireDefault(_lodash);var _pathutils=require("./services/pathutils");function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}function _toConsumableArray(arr){return _arrayWithoutHoles(arr)||_iterableToArray(arr)||_unsupportedIterableToArray(arr)||_nonIterableSpread();}function _nonIterableSpread(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArray(iter){if(typeof Symbol!=="undefined"&&Symbol.iterator in Object(iter))return Array.from(iter);}function _arrayWithoutHoles(arr){if(Array.isArray(arr))return _arrayLikeToArray(arr);}function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){if(typeof Symbol==="undefined"||!(Symbol.iterator in Object(arr)))return;var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}var _window=window,React=_window.React;/**
+ *
+ * @param {array} data
+ * @param {object} options
+ * @param {object} options.columns
+ * @param {string|object} options.columns[]
+ * @param {string} options.columns[].path
+ * @param {string} options.columns[].label
+ * @param {"string"} options.columns[].type
+ * @param {boolean} options.columns[].lock
+ * @param {boolean} options.columns[].hide
+ * @param {boolean} options.applyHiddenFilter
+ * @param {object} options.icons
+ * @param {object} options.icons.lock
+ * @param {string} options.icons.filter
+ * @param {string} options.icons.lock.on
+ * @param {string} options.icons.lock.off
+ * @param {object} options.icons.hide
+ * @param {string} options.icons.hide.on
+ * @param {string} options.icons.hide.off
+ * @return {JSX.Element}
+ * @constructor
+ */function ReactTabularGrid(_ref){var data=_ref.data,options=_ref.options;var _React$useState=React.useState([]),_React$useState2=_slicedToArray(_React$useState,2),columns=_React$useState2[0],setColumns=_React$useState2[1];React.useEffect(function(){var newColumns=Object.keys(options.columns).map(function(key){var base={name:key};if(typeof options.columns[key]==='string'){base.path=options.columns[key];base.type='string';base.lock=false;base.hide=false;base.label=base.name;}else if(_typeof(options.columns[key])==='object'){var _options$columns$key=options.columns[key],path=_options$columns$key.path,_options$columns$key$=_options$columns$key.type,type=_options$columns$key$===void 0?'string':_options$columns$key$,_options$columns$key$2=_options$columns$key.lock,lock=_options$columns$key$2===void 0?false:_options$columns$key$2,_options$columns$key$3=_options$columns$key.hide,hide=_options$columns$key$3===void 0?false:_options$columns$key$3,_options$columns$key$4=_options$columns$key.label,label=_options$columns$key$4===void 0?base.name:_options$columns$key$4;base.path=path;base.type=type;base.lock=lock;base.hide=hide;base.label=label;}return base;});setColumns(newColumns);},[JSON.stringify({data:data,options:options})]);return/*#__PURE__*/React.createElement(ColumnsComponent,{options:options,columns:columns,data:data});}function ColumnsComponent(_ref2){var _ref2$options=_ref2.options;_ref2$options=_ref2$options===void 0?{}:_ref2$options;var _ref2$options$applyHi=_ref2$options.applyHiddenFilters,applyHiddenFilters=_ref2$options$applyHi===void 0?true:_ref2$options$applyHi,_ref2$options$icons=_ref2$options.icons;_ref2$options$icons=_ref2$options$icons===void 0?{}:_ref2$options$icons;var _ref2$options$icons$f=_ref2$options$icons.filter,filterIcon=_ref2$options$icons$f===void 0?'fas fa-filter':_ref2$options$icons$f,_ref2$options$icons$l=_ref2$options$icons.lock;_ref2$options$icons$l=_ref2$options$icons$l===void 0?{}:_ref2$options$icons$l;var _ref2$options$icons$l2=_ref2$options$icons$l.on,lockIconOn=_ref2$options$icons$l2===void 0?'fas fa-lock':_ref2$options$icons$l2,_ref2$options$icons$l3=_ref2$options$icons$l.off,lockIconOff=_ref2$options$icons$l3===void 0?'fas fa-lock-open':_ref2$options$icons$l3,_ref2$options$icons$h=_ref2$options$icons.hide;_ref2$options$icons$h=_ref2$options$icons$h===void 0?{}:_ref2$options$icons$h;var _ref2$options$icons$h2=_ref2$options$icons$h.on,hideIconOn=_ref2$options$icons$h2===void 0?'fas fa-eye-slash':_ref2$options$icons$h2,_ref2$options$icons$h3=_ref2$options$icons$h.off,hideIconOff=_ref2$options$icons$h3===void 0?'fas fa-eye':_ref2$options$icons$h3,data=_ref2.data,columns=_ref2.columns;var _React$useState3=React.useState(columns),_React$useState4=_slicedToArray(_React$useState3,2),config=_React$useState4[0],setConfig=_React$useState4[1];var _React$useState5=React.useState(false),_React$useState6=_slicedToArray(_React$useState5,2),settingsStatus=_React$useState6[0],setSettingsStatus=_React$useState6[1];var _React$useState7=React.useState([]),_React$useState8=_slicedToArray(_React$useState7,2),uniqueValues=_React$useState8[0],setUniqueValues=_React$useState8[1];var _React$useState9=React.useState(data),_React$useState10=_slicedToArray(_React$useState9,2),filteredData=_React$useState10[0],setFilteredData=_React$useState10[1];var _React$useState11=React.useState([]),_React$useState12=_slicedToArray(_React$useState11,2),filters=_React$useState12[0],setFilters=_React$useState12[1];var _React$useState13=React.useState(null),_React$useState14=_slicedToArray(_React$useState13,2),showFilterMenu=_React$useState14[0],setShowFilterMenu=_React$useState14[1];React.useEffect(function(){var newFilteredData=config.reduce(function(acc,column){if(column.hide&&!applyHiddenFilters){return acc;}var columnFilters=filters.find(function(el){return el.name===column.name;});if(!columnFilters){return acc;}return(0,_pathutils.getFilteredColumn)(column.path,acc,columnFilters.values);},(0,_lodash2["default"])(data));setFilteredData(newFilteredData);},[JSON.stringify({data:data,filters:filters})]);React.useEffect(function(){var currentConfig=config.map(function(el){return _objectSpread({},el);});var newConfig=columns;if(currentConfig.length===0){if(newConfig.length){var newUnique=newConfig.map(function(_ref3){var path=_ref3.path,name=_ref3.name;return{name:name,path:path,values:(0,_pathutils.getUniqueValuesByPath)(path,data)};});setUniqueValues(newUnique);}setConfig(newConfig);}else{var populated=currentConfig.reduce(function(acc,el){var prevColIndex=newConfig.findIndex(function(_ref4){var name=_ref4.name;return name===el.name;});if(prevColIndex===-1){return acc;}var name=el.name;var _newConfig$prevColInd=newConfig[prevColIndex],label=_newConfig$prevColInd.label,path=_newConfig$prevColInd.path,hide=_newConfig$prevColInd.hide,lock=_newConfig$prevColInd.lock;var newEl={name:name,hide:el.hide!==undefined?el.hide:hide,label:el.label!==undefined?el.label:label,lock:el.lock!==undefined?el.lock:lock,path:path};acc.push(newEl);},[]);if(populated.length){var _newUnique=newConfig.map(function(_ref5){var path=_ref5.path,name=_ref5.name;return{name:name,path:path,values:(0,_pathutils.getUniqueValuesByPath)(path,data)};});setUniqueValues(_newUnique);}setConfig(populated);}},[JSON.stringify({columns:columns})]);function onFilterChange(columnName,id,value){console.log({columnName:columnName,id:id,value:value});var prevFilters=_toConsumableArray(filters);var currentColumnFiltersIndex=prevFilters.findIndex(function(el){return el.name===columnName;});if(currentColumnFiltersIndex!==-1){if(!value){var itemToRemove=prevFilters[currentColumnFiltersIndex].values.findIndex(function(el){return el===id;});prevFilters[currentColumnFiltersIndex].values.splice(itemToRemove,1);}else{prevFilters[currentColumnFiltersIndex].values.push(id);}}else{prevFilters.push({name:columnName,values:[id]});}console.log(prevFilters);var newFilters=prevFilters.filter(function(cat){return cat.values.length>=1;});setFilters(newFilters);}function manageToggleFilter(columnName){if(showFilterMenu&&showFilterMenu===columnName){setShowFilterMenu(null);}else{setShowFilterMenu(columnName);}}function manageToggleLock(columnName){var newConfig=config.map(function(el){if(el.name===columnName){return _objectSpread(_objectSpread({},el),{},{lock:!el.lock});}return el;});setConfig(newConfig);}function manageToggleHide(columnName){var newConfig=config.map(function(el){if(el.name===columnName){return _objectSpread(_objectSpread({},el),{},{hide:!el.hide});}return el;});setConfig(newConfig);}function renderColumn(_ref6,columnIndex){var name=_ref6.name,path=_ref6.path,type=_ref6.type,label=_ref6.label,lock=_ref6.lock,hide=_ref6.hide;var header=label||name;var columnUniqueValues=uniqueValues.find(function(col){return col.name===name;});var columnFilters=filters.find(function(col){return col.name===name;});if(hide){return null;}return/*#__PURE__*/React.createElement("div",{className:"tabular-column",id:header,key:"".concat(header,"-COLUMN"),"data-index":columnIndex},/*#__PURE__*/React.createElement("div",{className:"tabular-header"},/*#__PURE__*/React.createElement("div",{className:"tabular-header__wrapper"},/*#__PURE__*/React.createElement("div",{className:"header-label"},header),/*#__PURE__*/React.createElement("div",{className:"header-actions"},/*#__PURE__*/React.createElement("i",{className:filterIcon,onClick:function onClick(){return manageToggleFilter(name);}}),/*#__PURE__*/React.createElement("i",{className:lock?lockIconOn:lockIconOff,onClick:function onClick(){return manageToggleLock(name);}}),/*#__PURE__*/React.createElement("i",{className:hide?hideIconOn:hideIconOff,onClick:function onClick(){return manageToggleHide(name);}})),showFilterMenu!==null&&showFilterMenu===name&&/*#__PURE__*/React.createElement("div",{className:"header-label__filters-container"},columnUniqueValues===null||columnUniqueValues===void 0?void 0:columnUniqueValues.values.map(function(el){return/*#__PURE__*/React.createElement("div",{className:"filter-item"},/*#__PURE__*/React.createElement("label",{htmlFor:el},el),/*#__PURE__*/React.createElement("input",{type:"checkbox",id:el,defaultChecked:columnFilters===null||columnFilters===void 0?void 0:columnFilters.values.includes(el),onChange:function onChange(_ref7){var target=_ref7.target;return onFilterChange(name,target.id,target.checked);}}));})))),filteredData.map(function(el,index){return/*#__PURE__*/React.createElement("div",{className:"tabular-cell",key:"".concat(header,"-ROW-").concat(index)},(0,_pathutils.accessObjectByString)(path,el));}));}var lockedColumns=config.filter(function(column){return column.lock;});var unlockedColumns=config.filter(function(column){return!column.lock;});return/*#__PURE__*/React.createElement("div",{className:"tabular-container"},lockedColumns.length>=1&&/*#__PURE__*/React.createElement("div",{className:"locked-columns__container"},lockedColumns.map(renderColumn)),unlockedColumns.map(renderColumn),/*#__PURE__*/React.createElement("div",{className:"options-container","data-toggled":settingsStatus},settingsStatus?/*#__PURE__*/React.createElement("div",{className:"tabular-settings"},/*#__PURE__*/React.createElement("i",{className:"fa fa-times close-settings",onClick:function onClick(){return setSettingsStatus(false);}}),config.map(function(_ref8){var name=_ref8.name,label=_ref8.label,lock=_ref8.lock,hide=_ref8.hide;return/*#__PURE__*/React.createElement("div",{className:"tabular-settings__item"},/*#__PURE__*/React.createElement("span",{className:"tabular-settings__item-label",title:label},label),/*#__PURE__*/React.createElement("div",{className:"tabular-settings__item-actions"},/*#__PURE__*/React.createElement("i",{className:lock?lockIconOn:lockIconOff,onClick:function onClick(){return manageToggleLock(name);}}),/*#__PURE__*/React.createElement("i",{className:hide?hideIconOn:hideIconOff,onClick:function onClick(){return manageToggleHide(name);}})));})):/*#__PURE__*/React.createElement("i",{className:"fa fa-cog open-settings",onClick:function onClick(){return setSettingsStatus(true);}})));}
+
+},{"./services/pathutils":4,"lodash.clonedeep":336}]},{},[2]);

@@ -32,11 +32,26 @@
             white-space: nowrap;
         }
         .tabular-header {
-            display: flex;
             position: sticky;
-            background-color: white;
-            padding: 5px 0;
             top: 0;
+            .tabular-header__wrapper {
+                display: flex;
+                background-color: white;
+                padding: 5px 15px 0 0;
+                position: relative;
+                .header-label {
+                    flex-grow: 1;
+                }
+                .header-label__filters-container {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: white;
+                    padding: 5px;
+                    border: 1px solid black;
+                    width: 100%;
+                }
+            }
         }
     }
     &:hover .options-container {
@@ -50,13 +65,14 @@
         background-color: white;
         padding: .6rem;
         max-height: max-content;
+        align-self: flex-start;
         &[data-toggled="true"] {
             display: block;
         }
         .tabular-settings {
             position: relative;
             border: 1px solid black;
-            padding: 20px 40px;
+            padding: 30px;
             .close-settings {
                 position: absolute;
                 top: 0;
@@ -66,9 +82,22 @@
             }
             .tabular-settings__item {
                 display: flex;
-                .open-settings {
-                    padding: 10px;
-                    cursor: pointer;
+                justify-content: space-between;
+                max-width: 33vw;
+                .tabular-settings__item-label {
+                    flex-grow: 1;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 100%;
+                }
+                .tabular-settings__item-actions {
+                    margin-left: 20px;
+                    display: flex;
+                    & > * {
+                        padding: 5px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
