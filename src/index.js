@@ -16,6 +16,7 @@ const { React } = window;
  * @param {"string"} options.columns[].type
  * @param {boolean} options.columns[].lock
  * @param {boolean} options.columns[].hide
+ * @param {boolean} options.columns[].renderContent
  * @param {boolean} options.applyHiddenFilter
  * @param {object} options.icons
  * @param {object} options.icons.lock
@@ -51,12 +52,14 @@ export default function ReactTabularGrid({
                         lock = false,
                         hide = false,
                         label = base.name,
+                        renderContent,
                     } = options.columns[key];
                     base.path = path;
                     base.type = type;
                     base.lock = lock;
                     base.hide = hide;
                     base.label = label;
+                    base.renderContent = renderContent;
                 }
                 return base;
             });
@@ -109,7 +112,7 @@ function ColumnsComponent({
                 const newUnique = newConfig.map(({ path, name }) => ({
                     name,
                     path,
-                    values: getUniqueValuesByPath(path, data),
+                    values: path ? getUniqueValuesByPath(path, data) : null,
                 }));
                 setUniqueValues(newUnique);
             }
@@ -130,6 +133,7 @@ function ColumnsComponent({
                     path,
                 };
                 acc.push(newEl);
+                return acc;
             }, []);
             if (populated.length) {
                 const newUnique = newConfig.map(({ path, name }) => ({
@@ -144,7 +148,6 @@ function ColumnsComponent({
     }, [JSON.stringify({ columns })]);
 
     function onFilterChange(columnName, id, value) {
-        console.log({ columnName, id, value });
         const prevFilters = [...filters];
         const currentColumnFiltersIndex = prevFilters.findIndex(el => el.name === columnName);
         if (currentColumnFiltersIndex !== -1) {
@@ -158,7 +161,6 @@ function ColumnsComponent({
         } else {
             prevFilters.push({ name: columnName, values: [id] });
         }
-        console.log(prevFilters);
         const newFilters = prevFilters.filter(cat => cat.values.length >= 1);
         setFilters(newFilters);
     }
@@ -204,6 +206,7 @@ function ColumnsComponent({
             label,
             lock,
             hide,
+            renderContent,
         },
         columnIndex,
     ) {
@@ -247,14 +250,39 @@ function ColumnsComponent({
                         )}
                     </div>
                 </div>
-                {filteredData.map((el, index) => (
-                    <div
-                        className='tabular-cell'
-                        key={`${header}-ROW-${index}`}
-                    >
-                        {accessObjectByString(path, el)}
-                    </div>
-                ))}
+                {filteredData.map((el, index) => {
+                    if (renderContent && typeof renderContent === 'function') {
+                        return renderContent({
+                            data: filteredData[columnIndex],
+                            columnUniqueValues,
+                            columnFilters,
+                            config: {
+                                column: {
+                                    name,
+                                    path,
+                                    type,
+                                    label,
+                                    lock,
+                                    hide,
+                                },
+                                global: config,
+                            },
+                        });
+                    }
+                    switch (type) {
+                        default: {
+                            return (
+                                <div
+                                    className='tabular-cell'
+                                    key={`${header}-ROW-${index}`}
+                                >
+                                    {accessObjectByString(path, el)}
+                                </div>
+                            );
+                        }
+                    }
+                })}
+
             </div>
         );
     }

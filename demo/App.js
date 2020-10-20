@@ -4,6 +4,10 @@ import { SAMPLE_RESTAURANT_DATA } from './sampleData';
 const { React } = window;
 
 export default function App() {
+    function renderCustomCell(data) {
+        return <button onClick={() => { console.log(data); alert(JSON.stringify(data)); }}>Click me</button>;
+    }
+
     return (
         <ReactTabularGrid
             data={SAMPLE_RESTAURANT_DATA}
@@ -28,6 +32,7 @@ export default function App() {
                     lastAnotherRating1Week: { path: 'reviews.0.rating', label: 'Last average ratings 1 week' },
                     lastAnotherRating1Month: { path: 'reviews.1.rating', label: 'Last average ratings 1 month' },
                     lastAnotherRating1Year: { path: 'reviews.2.rating', label: 'Last average ratings 1 year' },
+                    custom: { label: 'Custom column', renderContent: renderCustomCell },
                 },
             }}
         />
