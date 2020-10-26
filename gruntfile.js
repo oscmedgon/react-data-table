@@ -98,6 +98,6 @@ module.exports = function (grunt) {
     grunt.registerTask('build', ['clean:build', 'sass', 'copy:demo', 'browserify']);
     grunt.registerTask('serve', ['build', 'connect', 'watch']);
     grunt.registerTask('deploy', ['build', 'copy:deploy', 'buildcontrol']);
-    grunt.registerTask('dist', ['clean:lib']);
+    grunt.registerTask('dist', ['clean:lib', 'sass']);
     grunt.registerTask('default', ['dist']);
 };

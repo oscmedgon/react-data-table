@@ -1,8 +1,8 @@
+import React from 'react';
 import cloneDeep from 'lodash.clonedeep';
 
 import { accessObjectByString, getFilteredColumn, getUniqueValuesByPath } from './services/pathutils';
-
-const { React } = window;
+import { parseStringDate } from './services/dateUtils';
 
 
 /**
@@ -13,7 +13,7 @@ const { React } = window;
  * @param {string|object} options.columns[]
  * @param {string} options.columns[].path
  * @param {string} options.columns[].label
- * @param {"string"} options.columns[].type
+ * @param {"string"|"date"} options.columns[].type
  * @param {boolean} options.columns[].lock
  * @param {boolean} options.columns[].hide
  * @param {boolean} options.columns[].renderContent
@@ -73,6 +73,7 @@ export default function ReactTabularGrid({
 function ColumnsComponent({
     options: {
         applyHiddenFilters = true,
+        dateFormat = 'DD/MM/YYYY hh:mm:ss',
         icons: {
             filter: filterIcon = 'fas fa-filter',
             lock: {
@@ -210,12 +211,12 @@ function ColumnsComponent({
         },
         columnIndex,
     ) {
-        const header = label || name;
-        const columnUniqueValues = uniqueValues.find((col => col.name === name));
-        const columnFilters = filters.find((col => col.name === name));
-        if (hide) {
+        if (hide || (!path && !renderContent)) {
             return null;
         }
+        const header = label || name;
+        const columnUniqueValues = path ? uniqueValues.find((col => col.name === name)) : null;
+        const columnFilters = filters.find((col => col.name === name));
         return (
             <div
                 className='tabular-column'
@@ -228,8 +229,8 @@ function ColumnsComponent({
                         <div className='header-label'>
                             {header}
                         </div>
-                        <div className='header-actions'>
-                            <i className={filterIcon} onClick={() => manageToggleFilter(name)} />
+                        <div className='header-actions' data-filters={columnFilters?.values.length || 0}>
+                            <i className={filterIcon} data-filters={columnFilters?.values.length || 0} onClick={() => manageToggleFilter(name)} />
                             <i className={lock ? lockIconOn : lockIconOff} onClick={() => manageToggleLock(name)} />
                             <i className={hide ? hideIconOn : hideIconOff} onClick={() => manageToggleHide(name)} />
                         </div>
@@ -237,11 +238,12 @@ function ColumnsComponent({
                             <div className='header-label__filters-container'>
                                 {columnUniqueValues?.values.map(el => (
                                     <div className='filter-item'>
-                                        <label htmlFor={el}>{el}</label>
+                                        {type === 'string' && <label htmlFor={el}>{el}</label>}
+                                        {type === 'date' && <label htmlFor={el}>{parseStringDate(el, dateFormat)}                                        </label>}
                                         <input
                                             type='checkbox'
                                             id={el}
-                                            defaultChecked={columnFilters?.values.includes(el)}
+                                            defaultChecked={columnFilters?.values.includes(String(el))}
                                             onChange={({ target }) => onFilterChange(name, target.id, target.checked)}
                                         />
                                     </div>
@@ -252,24 +254,52 @@ function ColumnsComponent({
                 </div>
                 {filteredData.map((el, index) => {
                     if (renderContent && typeof renderContent === 'function') {
-                        return renderContent({
-                            data: filteredData[columnIndex],
-                            columnUniqueValues,
-                            columnFilters,
-                            config: {
-                                column: {
-                                    name,
-                                    path,
-                                    type,
-                                    label,
-                                    lock,
-                                    hide,
-                                },
-                                global: config,
-                            },
-                        });
+                        return (
+                            <div
+                                className='tabular-cell'
+                                key={`${header}-ROW-${index}`}
+                            >
+                                {
+                                    renderContent({
+                                        rowData: filteredData[index],
+                                        fullData: filteredData,
+                                        columnUniqueValues,
+                                        columnFilters,
+                                        config: {
+                                            column: {
+                                                name,
+                                                path,
+                                                type,
+                                                label,
+                                                lock,
+                                                hide,
+                                            },
+                                            global: config,
+                                        },
+                                    })
+                            }
+                            </div>
+                        );
+                    }
+                    if (!path) {
+                        const error = new Error('Tryed to render a column without an specified path');
+                        console.error(error.stack);
+                        return null;
                     }
                     switch (type) {
+                        case 'date': {
+                            const formattedDate = parseStringDate(accessObjectByString(path, el), dateFormat);
+
+                            return (
+                                <div
+                                    className='tabular-cell'
+                                    key={`${header}-ROW-${index}`}
+                                >
+                                    {formattedDate}
+                                </div>
+
+                            );
+                        }
                         default: {
                             return (
                                 <div
