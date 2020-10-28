@@ -125,13 +125,20 @@ function ColumnsComponent({
                     return acc;
                 }
                 const { name } = el;
-                const { label, path, hide, lock } = newConfig[prevColIndex];
+                const {
+                    label,
+                    path,
+                    hide,
+                    lock,
+                    ...rest
+                } = newConfig[prevColIndex];
                 const newEl = {
                     name,
                     hide: el.hide !== undefined ? el.hide : hide,
-                    label: el.label !== undefined ? el.label : label,
+                    label: label !== undefined ? label : el.label,
                     lock: el.lock !== undefined ? el.lock : lock,
                     path,
+                    ...rest,
                 };
                 acc.push(newEl);
                 return acc;
@@ -140,7 +147,7 @@ function ColumnsComponent({
                 const newUnique = newConfig.map(({ path, name }) => ({
                     name,
                     path,
-                    values: getUniqueValuesByPath(path, data),
+                    values: path ? getUniqueValuesByPath(path, data) : null,
                 }));
                 setUniqueValues(newUnique);
             }

@@ -1,6 +1,6 @@
 {
   "name": "react-tabular-grid",
-  "version": "1.0.0-beta-19",
+  "version": "1.0.0-beta-22",
   "description": "React library to create tabular data",
   "module": "lib/index.js",
   "main": "lib/index.js",
